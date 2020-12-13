@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89b9f5ed-0025-42da-9ee2-f761af97f3da" name="默认的" comment="initTest">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/12306test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e8a2c73d-a62c-4bd1-957b-013cab1ca4f8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e8a2c73d-a62c-4bd1-957b-013cab1ca4f8/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastiml/core/controller/ticketMachine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastiml/model/Station.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastiml/model/StopInfo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastiml/model/dbinit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastiml/model/train.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gensql/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/machine_test.go" afterDir="false" />
+    <list default="true" id="89b9f5ed-0025-42da-9ee2-f761af97f3da" name="默认的" comment="delete main">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastiml/model/dbinit.go" beforeDir="false" afterPath="$PROJECT_DIR$/fastiml/model/dbinit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/machine_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/machine_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +44,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Go 测试.12306test/test 中的 BenchmarkMachine">
-    <configuration name="12306test/test 中的 BenchmarkAdd" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go 测试.12306test/test 中的 BenchmarkMachine (1)">
+    <configuration name="go build 12306test/fastiml" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="12306test" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/fastiml/main.go" />
+      <package value="12306test/fastiml" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="12306test/test 中的 BenchmarkMachine (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="12306test" />
       <working_directory value="$PROJECT_DIR$/test" />
       <framework value="gobench" />
@@ -68,7 +62,7 @@
       <package value="12306test/test" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QBenchmarkAdd\E$" />
+      <pattern value="^\QBenchmarkMachine\E$" />
       <method v="2" />
     </configuration>
     <configuration name="12306test/test 中的 BenchmarkMachine" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -93,17 +87,6 @@
       <pattern value="^\QBenchmarkName\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="12306test/test 中的 TestHelloWorld" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="12306test" />
-      <working_directory value="$PROJECT_DIR$/test" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="12306test/test" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestHelloWorld\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="12306test/test 中的 TestMachine" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="12306test" />
       <working_directory value="$PROJECT_DIR$/test" />
@@ -117,11 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.12306test/test 中的 BenchmarkMachine (1)" />
+        <item itemvalue="Go 构建.go build 12306test/fastiml" />
         <item itemvalue="Go 测试.12306test/test 中的 BenchmarkMachine" />
         <item itemvalue="Go 测试.12306test/test 中的 BenchmarkName" />
         <item itemvalue="Go 测试.12306test/test 中的 TestMachine" />
-        <item itemvalue="Go 测试.12306test/test 中的 TestHelloWorld" />
-        <item itemvalue="Go 测试.12306test/test 中的 BenchmarkAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -129,11 +112,48 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/fastiml" />
     </ignored-roots>
     <MESSAGE value="initTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="initTest" />
+    <MESSAGE value="delete main" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete main" />
   </component>
 </project>

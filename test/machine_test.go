@@ -71,6 +71,7 @@ func BenchmarkMachine(b *testing.B) {
 	var machine controller.TicketMachine
 	// TODO 创建machine
 	machine = testMachine{}
+
 	btInfos := genTestData(b)
 	tickets := make([]*controller.Ticket, 0)
 	tt := make([][]*controller.Ticket, 0) // 零时存票
@@ -92,7 +93,7 @@ func BenchmarkMachine(b *testing.B) {
 		tickets = append(tickets, v...)
 	}
 	b.Log(len(tickets))
-	//checkTickets(tickets,b,machine)
+	checkTickets(tickets, b, machine)
 }
 
 func buy(btInfos [][]*controller.BuyTicketInfo, machine controller.TicketMachine) []*controller.Ticket {
