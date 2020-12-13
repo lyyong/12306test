@@ -67,15 +67,17 @@ func (m testMachine) BuyTicket(infos []*controller.BuyTicketInfo) []*controller.
 
 // 测试machine的正确性
 func BenchmarkMachine(b *testing.B) {
-	//b.Log(b.N)
 	var machine controller.TicketMachine
 	// TODO 创建machine
+	// 实现自己的类
 	machine = testMachine{}
 
+	// 生成测试数据
 	btInfos := genTestData(b)
+
 	tickets := make([]*controller.Ticket, 0)
 	tt := make([][]*controller.Ticket, 0) // 零时存票
-	// 100个goroutine
+	// 50个goroutine
 	pool := NewPool(50)
 	b.StartTimer()
 	for i := 0; i < 2000; i++ {
@@ -89,10 +91,12 @@ func BenchmarkMachine(b *testing.B) {
 	}
 	pool.Wait()
 	b.StopTimer()
+	// 将所有存在tt中的临时票放入到tickets中
 	for _, v := range tt {
 		tickets = append(tickets, v...)
 	}
 	b.Log(len(tickets))
+	// 检查是否有重复的票
 	checkTickets(tickets, b, machine)
 }
 
@@ -108,8 +112,10 @@ func genTestData(b *testing.B) [][]*controller.BuyTicketInfo {
 	model.InitDB()
 	// 每次生成两万个数据
 	tsInfos := make([][]*controller.BuyTicketInfo, 20000)
+	// 获取列车
 	train := model.GetAllTrains()[0]
 	b.Log(train)
+	// 通过列车获取所有停靠站信息
 	ts := model.GetStopInfos(map[string]interface{}{"train_id": train.ID})
 	stations := make([]*model.StopInfo, len(ts))
 	// 通过seq进行排序
@@ -155,6 +161,7 @@ func getRandSeatType() string {
 
 func checkTickets(tickets []*controller.Ticket, b *testing.B, machine controller.TicketMachine) {
 	for _, v := range tickets {
+		// 没买到票就检查,是否还有票但是没买到
 		if v.SeatInfo() == "" &&
 			machine.SearchTicketNum(
 				controller.NewBuyTicketInfo(v.StartStation(), v.EndStation(), "A")) > 0 &&
@@ -164,6 +171,7 @@ func checkTickets(tickets []*controller.Ticket, b *testing.B, machine controller
 				controller.NewBuyTicketInfo(v.StartStation(), v.EndStation(), "C")) > 0 {
 			b.Fatal("有票但是没卖")
 		}
+		// 看是否有重复的票
 		for _, vj := range tickets {
 			if v.Equals(vj) {
 				b.Fatal("出现相同票")
